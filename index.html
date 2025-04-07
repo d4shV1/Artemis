@@ -3,91 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mon Site Web</title>
-  <meta name="description" content="Un template HTML moderne avec Tailwind CSS." />
+  <title>Portfolio - D4sh</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a2e0e6c66b.js" crossorigin="anonymous"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-100 text-gray-800 font-sans">
 
   <!-- Header -->
   <header class="bg-white shadow sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-blue-600">MonLogo</h1>
-      <nav class="space-x-6 hidden md:block">
-        <a href="#" class="hover:text-blue-600 transition">Accueil</a>
-        <a href="#about" class="hover:text-blue-600 transition">À propos</a>
-        <a href="#services" class="hover:text-blue-600 transition">Services</a>
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-blue-600">D4sh</h1>
+      <nav class="space-x-6">
+        <a href="#projets" class="hover:text-blue-600 transition">Projets</a>
         <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="bg-blue-600 text-white py-20 text-center">
-    <div class="max-w-3xl mx-auto px-4">
-      <h2 class="text-4xl md:text-5xl font-bold mb-4">Bienvenue sur Mon Site</h2>
-      <p class="text-lg mb-6">Un template HTML moderne, responsive et rapide à personnaliser.</p>
-      <a href="#about" class="bg-white text-blue-600 font-semibold py-2 px-6 rounded-full shadow hover:bg-gray-100 transition">En savoir plus</a>
+  <!-- Hero -->
+  <section class="bg-blue-600 text-white py-24 text-center">
+    <div class="max-w-3xl mx-auto px-4" data-aos="fade-up">
+      <h2 class="text-5xl font-bold mb-4">Salut, moi c’est D4sh</h2>
+      <p class="text-lg mb-6">Développeur Web passionné par la création d’expériences modernes et interactives.</p>
+      <a href="#projets" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">Voir mes projets</a>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="py-20 bg-white">
+  <!-- Projets -->
+  <section id="projets" class="py-20 bg-white">
     <div class="max-w-5xl mx-auto px-4">
-      <h3 class="text-3xl font-bold mb-6 text-center">À propos</h3>
-      <p class="text-center text-gray-600">Ce template utilise Tailwind CSS pour offrir une base solide et moderne. Vous pouvez le personnaliser facilement pour votre projet personnel ou professionnel.</p>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="py-20 bg-gray-100">
-    <div class="max-w-6xl mx-auto px-4">
-      <h3 class="text-3xl font-bold text-center mb-12">Nos Services</h3>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-          <i class="fas fa-laptop-code text-3xl text-blue-600 mb-4"></i>
-          <h4 class="text-xl font-semibold mb-2">Développement Web</h4>
-          <p class="text-gray-600">Création de sites web performants, modernes et responsives.</p>
+      <h3 class="text-3xl font-bold text-center mb-12">Mes Projets</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-gray-100 p-6 rounded-xl shadow" data-aos="fade-up">
+          <h4 class="text-xl font-semibold mb-2">Landing Page</h4>
+          <p class="text-gray-600">Page d’accueil stylée avec Tailwind, responsive et optimisée SEO.</p>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-          <i class="fas fa-bullhorn text-3xl text-blue-600 mb-4"></i>
-          <h4 class="text-xl font-semibold mb-2">Marketing Digital</h4>
-          <p class="text-gray-600">Stratégies SEO, campagnes sociales et publicité en ligne.</p>
+        <div class="bg-gray-100 p-6 rounded-xl shadow" data-aos="fade-up" data-aos-delay="100">
+          <h4 class="text-xl font-semibold mb-2">Dashboard Admin</h4>
+          <p class="text-gray-600">UI admin avec stats, graphiques et dark mode.</p>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-          <i class="fas fa-paint-brush text-3xl text-blue-600 mb-4"></i>
-          <h4 class="text-xl font-semibold mb-2">Design Graphique</h4>
-          <p class="text-gray-600">Création d’identités visuelles attractives et professionnelles.</p>
+        <div class="bg-gray-100 p-6 rounded-xl shadow" data-aos="fade-up" data-aos-delay="200">
+          <h4 class="text-xl font-semibold mb-2">Portfolio 3D</h4>
+          <p class="text-gray-600">Portfolio animé avec Three.js, pour un effet "wow".</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-20 bg-white">
-    <div class="max-w-xl mx-auto px-4">
-      <h3 class="text-3xl font-bold mb-6 text-center">Contactez-nous</h3>
+  <section id="contact" class="py-20 bg-gray-100">
+    <div class="max-w-xl mx-auto px-4" data-aos="fade-up">
+      <h3 class="text-3xl font-bold mb-6 text-center">Contacte-moi</h3>
       <form class="space-y-4">
-        <input type="text" placeholder="Votre nom" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
-        <input type="email" placeholder="Votre email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
-        <textarea placeholder="Votre message" rows="5" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        <input type="text" placeholder="Ton nom" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <input type="email" placeholder="Ton email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <textarea placeholder="Ton message" rows="5" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
         <button type="submit" class="bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition">Envoyer</button>
       </form>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-6">
-    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-      <p class="mb-4 md:mb-0">© 2025 Mon Site. Tous droits réservés.</p>
-      <div class="space-x-4">
-        <a href="#" class="hover:text-blue-400"><i class="fab fa-facebook"></i></a>
-        <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="hover:text-blue-400"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
+  <footer class="bg-white border-t py-6 text-center text-sm text-gray-500">
+    © 2025 D4sh — Tous droits réservés.
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
