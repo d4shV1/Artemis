@@ -1,70 +1,113 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio - D4sh</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script>
+    // Dark mode toggle
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+    }
+    // Load saved theme
+    window.onload = () => {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark');
+      }
+    };
+  </script>
+  <style>
+    body {
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
+    }
+    .dark body {
+      background: linear-gradient(to right, #1a1c1e, #2d2f31);
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
+<body class="text-gray-800 dark:text-gray-100 font-sans transition-colors duration-500">
 
   <!-- Header -->
-  <header class="bg-white shadow sticky top-0 z-50">
+  <header class="bg-white dark:bg-gray-900 shadow sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold text-blue-600">D4sh</h1>
+      <h1 class="text-xl font-bold text-blue-600 dark:text-blue-400">D4sh</h1>
       <nav class="space-x-6">
-        <a href="#projets" class="hover:text-blue-600 transition">Projets</a>
-        <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+        <a href="#projets" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Projets</a>
+        <a href="#competences" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Compétences</a>
+        <a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Contact</a>
+        <button onclick="toggleDarkMode()" class="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded text-sm">🌙 / ☀️</button>
       </nav>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="bg-blue-600 text-white py-24 text-center">
-    <div class="max-w-3xl mx-auto px-4" data-aos="fade-up">
-      <h2 class="text-5xl font-bold mb-4">Salut, moi c’est D4sh</h2>
-      <p class="text-lg mb-6">Développeur Web passionné par la création d’expériences modernes et interactives.</p>
-      <a href="#projets" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">Voir mes projets</a>
-    </div>
+  <section class="h-screen flex flex-col justify-center items-center text-center px-4" data-aos="zoom-in">
+    <img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" alt="Avatar" class="w-32 h-32 rounded-full mb-6 shadow-lg" />
+    <h1 class="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 mb-4">
+      Salut, moi c’est D4sh
+    </h1>
+    <p class="text-xl text-gray-700 dark:text-gray-300 mb-8 max-w-xl">
+      Développeur Web créatif, je transforme des idées en interfaces éclatantes ✨
+    </p>
+    <a href="#projets" class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-3 rounded-full text-lg shadow-lg hover:scale-105 transform transition">
+      Voir mes projets
+    </a>
   </section>
 
   <!-- Projets -->
-  <section id="projets" class="py-20 bg-white">
-    <div class="max-w-5xl mx-auto px-4">
-      <h3 class="text-3xl font-bold text-center mb-12">Mes Projets</h3>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-gray-100 p-6 rounded-xl shadow" data-aos="fade-up">
-          <h4 class="text-xl font-semibold mb-2">Landing Page</h4>
-          <p class="text-gray-600">Page d’accueil stylée avec Tailwind, responsive et optimisée SEO.</p>
+  <section id="projets" class="py-20 bg-white dark:bg-gray-800">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-12 text-purple-600 dark:text-purple-400">Mes Projets</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gradient-to-br from-pink-200 to-purple-300 dark:from-gray-700 dark:to-gray-600 p-6 rounded-xl shadow-xl" data-aos="fade-up">
+          <h3 class="text-xl font-bold mb-2">Landing Page</h3>
+          <p>Page d’accueil moderne, responsive, et pleine de peps 🎨</p>
         </div>
-        <div class="bg-gray-100 p-6 rounded-xl shadow" data-aos="fade-up" data-aos-delay="100">
-          <h4 class="text-xl font-semibold mb-2">Dashboard Admin</h4>
-          <p class="text-gray-600">UI admin avec stats, graphiques et dark mode.</p>
+        <div class="bg-gradient-to-br from-purple-200 to-blue-300 dark:from-gray-700 dark:to-gray-600 p-6 rounded-xl shadow-xl" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-xl font-bold mb-2">Dashboard Admin</h3>
+          <p>Interface d’administration avec dark mode et graphs interactifs 📊</p>
         </div>
-        <div class="bg-gray-100 p-6 rounded-xl shadow" data-aos="fade-up" data-aos-delay="200">
-          <h4 class="text-xl font-semibold mb-2">Portfolio 3D</h4>
-          <p class="text-gray-600">Portfolio animé avec Three.js, pour un effet "wow".</p>
+        <div class="bg-gradient-to-br from-yellow-200 to-pink-300 dark:from-gray-700 dark:to-gray-600 p-6 rounded-xl shadow-xl" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="text-xl font-bold mb-2">Portfolio 3D</h3>
+          <p>Portfolio avec animations WebGL et transitions fluides ✨</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Compétences -->
+  <section id="competences" class="py-20 bg-gray-100 dark:bg-gray-900">
+    <div class="max-w-4xl mx-auto px-4 text-center" data-aos="fade-up">
+      <h2 class="text-4xl font-bold mb-8 text-purple-600 dark:text-purple-400">Mes Compétences</h2>
+      <div class="flex flex-wrap justify-center gap-4 text-white">
+        <span class="bg-blue-500 px-4 py-2 rounded-full">HTML</span>
+        <span class="bg-yellow-400 px-4 py-2 rounded-full">JavaScript</span>
+        <span class="bg-cyan-500 px-4 py-2 rounded-full">Tailwind CSS</span>
+        <span class="bg-green-500 px-4 py-2 rounded-full">React</span>
+        <span class="bg-pink-500 px-4 py-2 rounded-full">UI Design</span>
+        <span class="bg-purple-500 px-4 py-2 rounded-full">Git & GitHub</span>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact -->
-  <section id="contact" class="py-20 bg-gray-100">
-    <div class="max-w-xl mx-auto px-4" data-aos="fade-up">
-      <h3 class="text-3xl font-bold mb-6 text-center">Contacte-moi</h3>
+  <section id="contact" class="py-20 bg-white dark:bg-gray-800">
+    <div class="max-w-lg mx-auto px-4 text-center" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-purple-700 dark:text-purple-400 mb-6">Contacte-moi</h2>
       <form class="space-y-4">
-        <input type="text" placeholder="Ton nom" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
-        <input type="email" placeholder="Ton email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
-        <textarea placeholder="Ton message" rows="5" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-        <button type="submit" class="bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition">Envoyer</button>
+        <input type="text" placeholder="Ton nom" class="w-full p-3 rounded-lg border border-gray-300 dark:bg-gray-700 dark:border-gray-600 dark:text-white focus:ring-2 focus:ring-purple-500" />
+        <input type="email" placeholder="Ton email" class="w-full p-3 rounded-lg border border-gray-300 dark:bg-gray-700 dark:border-gray-600 dark:text-white focus:ring-2 focus:ring-purple-500" />
+        <textarea placeholder="Ton message" rows="5" class="w-full p-3 rounded-lg border border-gray-300 dark:bg-gray-700 dark:border-gray-600 dark:text-white focus:ring-2 focus:ring-purple-500"></textarea>
+        <button type="submit" class="bg-purple-600 text-white py-3 px-6 rounded-lg hover:bg-purple-700 transition">Envoyer</button>
       </form>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-white border-t py-6 text-center text-sm text-gray-500">
+  <footer class="text-center py-6 bg-gradient-to-r from-purple-600 to-pink-500 text-white mt-12">
     © 2025 D4sh — Tous droits réservés.
   </footer>
 
