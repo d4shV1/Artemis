@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Courier New', monospace;
-    background-color: #010652;
+    background-color: #050505;
     color: #ffffff;
   }
   
@@ -11,7 +11,7 @@ body {
   }
   
   header, footer {
-    background-color: #37369b;
+    background-color: rgb(42, 42, 49);
     padding: 1em;
     text-align: center;
   }
@@ -28,7 +28,7 @@ body {
   }
   
   button {
-    background-color: #37369b;
+    background-color: rgb(42, 42, 49);
     color: #ffffff;
     border: 1px solid #ffffff;
     padding: 10px 20px;
@@ -41,6 +41,6 @@ body {
   
   button:hover {
     background-color: #ffffff;
-    color: #010652;
+    color: #050505;
   }
   
