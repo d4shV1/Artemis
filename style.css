@@ -1,17 +1,17 @@
 body {
     margin: 0;
     font-family: 'Courier New', monospace;
-    background-color: #0d0d0d;
-    color: #c0c080;
+    background-color: #010652;
+    color: #ffffff;
   }
   
   a {
-    color: #80ff80;
+    color: #ffffff;
     text-decoration: none;
   }
   
   header, footer {
-    background-color: #1a1a1a;
+    background-color: #37369b;
     padding: 1em;
     text-align: center;
   }
@@ -28,9 +28,9 @@ body {
   }
   
   button {
-    background-color: #333;
-    color: #c0c080;
-    border: 1px solid #c0c080;
+    background-color: #37369b;
+    color: #ffffff;
+    border: 1px solid #ffffff;
     padding: 10px 20px;
     cursor: pointer;
     font-family: inherit;
@@ -40,7 +40,7 @@ body {
   }
   
   button:hover {
-    background-color: #c0c080;
-    color: #0d0d0d;
+    background-color: #ffffff;
+    color: #010652;
   }
   
